@@ -1,0 +1,433 @@
+@import "reset";
+@import "vars";
+@import "fonts";
+@import "global";
+@import "swiper-vars";
+@import "swiper";
+
+.header {
+  background: $gradient-light;
+  padding-top: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  &-logo__link {
+  }
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+.menu {
+  &-left {
+    padding-left: 25px;
+  }
+  &-right {
+    padding-right: 80px;
+  }
+  &-list {
+    display: flex;
+    gap: 0 40px;
+    padding-top: 25px;
+  }
+  &-item {
+    &__link {
+      @extend %roboto-regular;
+      font-size: 16px;
+      color: $dark-grey;
+    }
+  }
+  &-mobile,
+  &-btn {
+    display: none;
+  }
+}
+
+.promo {
+  background-image: url(../images/promo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 100px;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-height: calc(100vh - 100px);
+  }
+  &__title {
+    @extend %impact-regular;
+    font-size: 76px;
+    letter-spacing: 0.02em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    align-self: center;
+    margin-left: 10px;
+  }
+  &__subtitle {
+    @extend %impact-regular;
+    font-size: 48px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid $black;
+    align-self: center;
+    & span {
+      padding-top: 10px;
+      margin-bottom: 10px;
+      display: block;
+      color: $gold;
+    }
+  }
+  &__text {
+    color: $dark-grey;
+    margin-bottom: 10px;
+  }
+  &__arrow {
+    margin-top: auto;
+    margin-bottom: 30px;
+    display: inline-block;
+    align-self: center;
+  }
+}
+.info {
+  margin-bottom: 100px;
+  &__part {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+    &-title {
+      @extend %roboto-light;
+      font-size: 32px;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    &-textbox {
+      display: flex;
+      justify-content: space-between;
+      gap: 0 20px;
+      margin-bottom: 30px;
+    }
+    &-text {
+      flex-basis: 439px;
+      margin-bottom: 30px;
+    }
+    &-img {
+      object-fit: cover;
+      width: 100%;
+    }
+    &-third {
+      padding-top: 68px;
+      gap: 0 20px;
+    }
+    &-first {
+      display: block;
+    }
+    &-second .info__part-text {
+      max-width: 352px;
+    }
+    &-third .info__part-text {
+      max-width: 377px;
+    }
+  }
+  &__content {
+    flex-basis: 415px;
+  }
+  &__table {
+    position: relative;
+    flex-basis: 450px;
+    border-bottom: 1px solid $black;
+    top: 20px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -20px;
+      border-bottom: 1px solid $black;
+      width: 100%;
+    }
+    & td {
+      padding-bottom: 20px;
+    }
+  }
+}
+.track {
+  background-image: url(../images/track-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  &__title {
+    @extend %roboto-light;
+    padding-top: 47px;
+    margin-bottom: 30px;
+    font-size: 32px;
+    text-transform: uppercase;
+  }
+  &__text {
+    max-width: 435px;
+  }
+  &__img {
+    margin: auto 0 90px auto;
+  }
+}
+.evo {
+  margin-bottom: 100px;
+  &__black {
+    background-color: $dark-grey;
+    padding: 100px 0 50px;
+    color: $white;
+    &-inner {
+      position: relative;
+      &::before {
+        content: "";
+        background-image: url(../images/Polygon1.svg);
+        background-size: cover;
+        position: absolute;
+        width: 185px;
+        height: 213px;
+        top: 210px;
+        left: -130px;
+      }
+      &::after {
+        content: "";
+        background-image: url(../images/Polygon2.svg);
+        background-size: cover;
+        position: absolute;
+        width: 498px;
+        height: 572px;
+        top: 295px;
+        left: -40px;
+      }
+    }
+    &-info {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    &-title {
+      @extend %roboto-light;
+      font-size: 32px;
+      text-transform: uppercase;
+      padding-right: 50px;
+    }
+    &-infobox {
+      flex-basis: 437px;
+      & p:last-child {
+        padding-top: 30px;
+      }
+    }
+    &-img {
+      display: block;
+      margin: 200px auto 60px;
+      position: relative;
+      z-index: 5;
+    }
+  }
+  &__deskr-list {
+    display: flex;
+    justify-content: center;
+    gap: 65px;
+    margin: 0 auto;
+    & dd {
+      text-transform: uppercase;
+    }
+  }
+  &__white {
+    &-inner {
+      padding-top: 120px;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url(../images/Polygon3.png);
+        background-size: cover;
+        width: 274px;
+        height: 257px;
+        top: -40px;
+        left: 365px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        background-image: url(../images/Polygon4.png);
+        background-size: cover;
+        width: 324px;
+        height: 311px;
+        top: 115px;
+        left: 596px;
+      }
+      & p:first-child {
+        margin-bottom: 30px;
+        max-width: 285px;
+      }
+      & p:nth-child(2) {
+        margin-bottom: 30px;
+        max-width: 437px;
+      }
+      & p:nth-child(3) {
+        max-width: 590px;
+      }
+    }
+    &-video {
+      margin-top: 100px;
+      background-image: url(../images/evo-video.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 264px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    &-link {
+      & span {
+        display: block;
+        color: $white;
+      }
+    }
+  }
+  &__link-img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.blog {
+  margin-bottom: 100px;
+  &__title {
+    @extend %roboto-light;
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+  &__item {
+    &-img {
+      margin-bottom: 20px;
+    }
+    &-title {
+      @extend %roboto-regular;
+      font-size: 20px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      min-height: 46px;
+    }
+    &-text {
+      margin-bottom: 10px;
+    }
+    &-link {
+      color: $dark-grey;
+      @extend %roboto-regular;
+      font-size: 12px;
+    }
+  }
+  &__slider {
+    position: relative;
+    padding-top: 50px;
+    margin-bottom: 100px;
+  }
+  &__button {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    cursor: pointer;
+  }
+  &__quote {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 20px;
+    &-box {
+      flex-basis: 434px;
+    }
+    &-img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+.blockquote {
+  margin-bottom: 30px;
+  &-name {
+    @extend %roboto-bold;
+    display: block;
+    margin-bottom: 10px;
+    & span {
+      display: block;
+      font-size: 12px;
+      color: $gold;
+      margin-bottom: 3px;
+    }
+  }
+  &-text {
+    @extend %roboto-italic;
+  }
+}
+.swiper-button-left {
+  transform: translateX(calc(-100% - 10px));
+}
+.swiper-button-right {
+  transform: translateX(10px);
+}
+.footer {
+  padding: 100px 0 80px;
+  background-color: $dark-grey;
+  color: $white;
+  &__title {
+    text-transform: uppercase;
+    @extend %roboto-light;
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 20px;
+  }
+  &__info-item {
+    margin-bottom: 40px;
+    & dt {
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      font-size: 16px;
+      @extend %roboto-bold;
+    }
+    & dd {
+      margin-bottom: 10px;
+    }
+  }
+  &__social {
+    &-list {
+      display: flex;
+      gap: 0 20px;
+      align-items: center;
+    }
+  }
+  &__address {
+    flex-basis: 462px;
+    &-title {
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      font-size: 16px;
+      @extend %roboto-bold;
+    }
+    &-text {
+      font-size: 16px;
+      margin-bottom: 20px;
+      font-style: normal;
+    }
+  }
+  &__bottom {
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__map {
+    height: 250px;
+  }
+}
+
+@import "media";

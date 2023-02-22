@@ -1,0 +1,40 @@
+%impact-regular {
+  font-family: "Impact", sans-serif;
+  font-weight: 400;
+}
+
+%roboto-light {
+  font-family: "RobotoCondensed", sans-serif;
+  font-weight: 300;
+}
+
+%roboto-regular {
+  font-family: "RobotoCondensed", sans-serif;
+  font-weight: 400;
+}
+
+%roboto-italic {
+  font-family: "RobotoCondensed", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+%roboto-bold {
+  font-family: "RobotoCondensed", sans-serif;
+  font-weight: 700;
+}
+
+%global-font {
+  font-family: "RobotoCondensed", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+$black: #040404;
+$gold: #9f6b08;
+$dark-grey: #363636;
+$white: #ffffff;
+$light-gold: #f9ce5c;
+$gradient-light: linear-gradient(180deg, #d8d4ca 0%, rgba(217, 217, 217, 0) 100%);
